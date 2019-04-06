@@ -47,6 +47,9 @@ struct estudiante{
     }TRES[10];
 
 }ESTU;
+char letra;
+float indice;
+int credito=0;
 
 int main(){
 
@@ -236,7 +239,7 @@ for(i=0;i<LIM;i++){
 void publicar_calificaciones_numericas_a_un_estudiante_de_una_materia(){
 
     for(i=0;i<LIM;LIM++){
-        printf("%d")
+        printf("%d/n",ESTU.TRES[i].nombre);
     }
 
 };
@@ -250,12 +253,47 @@ void borrar_calificaciones(){
 
 void calcular_indice(){
 
+    for(i=0;i<LIM;i++){
 
+        printf("en %s de \n",ESTU.TRES[i].nombre);
+        fflush(stdin);
+        printf("digite la letra");
+        scanf("%s",&letra);
+        int valor;
+        float indice;
+        for(i=0;i<LIM;i++){
+            credito+=ESTU.TRES[i].credito;
+        }
+        printf("creditos del ciclo,%d",credito);
+        for(i=0;i<=LIM;i++){
+            if(letra=='a'){valor+=4;};
+            if(letra=='b'){valor+=3;};
+            if(letra=='c'){valor+=2;};
+            if(letra=='d'){valor+=1;};
+            if(letra=='f'){valor+=0;};
+        }
+        printf("valor acumulado %d\n",valor);
+        indice=valor/credito;
+        printf("indice final%f\n",indice);
+}
 };
 
 
 void calcular_calificacion_promedio_de_una_materia(){
 
+printf("calcular promedio de una matateria\n");
+float notas[10];
+int canti;
+float final=0;
+    printf("digite la cantidad de evaluaciones hechas\n");
+    scanf("%d",&canti);
+    for(i=0;i<canti;i++){
+    printf("digite la calificacion %d de %d\n ",i+1,canti);
+    scanf("%f",&notas[i]);
+    final += notas[i];
+    }
+    final= final/canti;
+    printf("el acumulado es de %.2f\n\n",final);
 
 };
 

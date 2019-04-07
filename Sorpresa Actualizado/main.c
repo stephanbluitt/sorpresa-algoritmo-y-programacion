@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// 53/80
 char c;
 char * texto;
 char * texto_;
@@ -244,7 +244,7 @@ void publicar_calificaciones_numericas_a_un_estudiante_de_una_materia(){
 
 };
 
-
+//-9
 void borrar_calificaciones(){
 
 
@@ -297,13 +297,13 @@ float final=0;
 
 };
 
-
+// -9
 void alcular_calificacion_promedio_de_una_carrera(){
 
 
 };
 
-
+// -9
 void la_cantidad_de_horas_practicas_por_carrera(){
 };
 
